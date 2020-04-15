@@ -593,18 +593,21 @@ main{
 		  color:#803bf7;
 		  font-size: 5rem;
 		  font-weight: bold;
+		  position: relative;
 		  &--alt{
-			color:#504f4f;
+			color:#000;
 			font-size: 3rem;
+			position: relative;
 		  }
 	  }
 	  &__w{
 		margin: 0;
 		padding: 0;
-		  color:#504f4f;
+		  color:#fff;
 		  font-size: 3rem;
-		  &--alt{
 			  position: relative;
+		  &--alt{
+		  	position: relative;
 			color:#c2b93f;
 			font-size: 5rem;
 			font-weight: normal;
@@ -616,13 +619,16 @@ main{
 		  padding: 2rem;
 		  border-radius: 50%;
 		  border:1px #fff solid;
+		   position: relative;
 		  @include tr(.1s);
 		  &--active{
 			cursor: pointer;
 			  padding: 1rem;
 			  border:4px #fff solid;
+			  // & svg{
+			  // 	transform:rotate(180deg);
+			  // }
 			  &:hover{
-				  position: relative;
 				   padding: 1.5rem;
 			  }
 		  }
@@ -694,7 +700,7 @@ main{
 			margin: 4% 0;
 			align-content: end;
 			font-size: 2.4rem;
-			& img{
+			& svg{
 				margin:0 6% ;
 				height: 30px;
 				width: 30px;
@@ -712,21 +718,26 @@ main{
 			list-style: none;
 			display: flex;
 			flex-direction: row;
-			flex-wrap: wrap;
+			flex-wrap: wrap;	
 			justify-content: space-around;
 		}
 		& li{
-			display: block;
-			height: 60px;
-			width: 60px;
 			margin: 2.5% 10%;
+			// border:1px black solid;
 			border-radius: 50px;
-			padding: 4px;
+			padding: 3px;
+			&:hover{
+					background-color: #000;
+			}
 			& svg{
-				&:hover{
+			color:#2b8dd1;
+			fill:#000;
+				&:hover {
+					color:#000;
 					fill:#2b8dd1;
 				}
-				}
+			}
+				
 			}
 		}
 

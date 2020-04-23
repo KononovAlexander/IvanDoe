@@ -1120,6 +1120,7 @@ main{
 		@media (max-width: 768px) { 
 			.home{
 				height: auto;
+				padding-bottom: 2rem;
                  &__text{
                    width: 80%;
                    text-align: justify;
@@ -1153,7 +1154,7 @@ main{
 			.portfolio{
 				height: auto;
 				&::before{
-					font-size: 16rem;
+                  display: none;
 				}
                 &__container{
                  		padding: 0 4rem 3rem;
@@ -1190,6 +1191,9 @@ main{
                          	width: 600%;
 						}      
                 	}
+                }
+                &__ui{
+                	padding-bottom: 2rem;
                 }
                 &__pct{
                 	  &--html{
@@ -1250,13 +1254,12 @@ main{
 				&::before{
 					width: 300%;
 					left: -350%;
-				}
+				    } 
 				
-			}
+			      }
                 }
 			}
 			.bio{
-
 	  height: auto;
 	  padding:3rem 2rem;
 	  &__title{

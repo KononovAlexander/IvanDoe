@@ -1334,7 +1334,8 @@ main {
 
 @media (max-width: 768px) {
   .home {
-    height: auto; }
+    height: auto;
+    padding-bottom: 2rem; }
     .home__text {
       width: 80%;
       text-align: justify;
@@ -1365,7 +1366,7 @@ main {
   .portfolio {
     height: auto; }
     .portfolio::before {
-      font-size: 16rem; }
+      display: none; }
     .portfolio__container {
       padding: 0 4rem 3rem; }
     .portfolio__pct {
@@ -1389,6 +1390,8 @@ main {
       .skills__web--left::after {
         left: -650%;
         width: 600%; }
+    .skills__ui {
+      padding-bottom: 2rem; }
     .skills__pct--html::before {
       width: 500%; }
     .skills__pct--css::before {

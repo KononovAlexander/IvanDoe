@@ -229,7 +229,6 @@ main{
 	font-size: 0;
 	color: #fff;
 	text-align: center;
-	// padding: 0 8rem;
 	& div:nth-of-type(even){
 		padding-top: 10%;
 	}
@@ -428,6 +427,9 @@ main{
            	&::after{
 		  		left:200%;
 		  	}
+		  	&::before{
+		  		left: 200%;
+		  	}
 		  }
 		 
 		  &::before{
@@ -467,50 +469,46 @@ main{
 		}
 	  }
 	  &__pct{
-	  	  outline: 1px red solid;
 		  position: relative;
 		  width: 8rem;
 		  height: 8rem;
+		  display: flex;
+		  align-items: center;
+		  justify-content: space-around;
 		  &--html{
 			margin-top: 0;
 			  &::before{
-				  // width: 800%;
-				  left: 200%;
+			  	  width: 800%;
 			  }
 		  }
 		  &--css{
 			margin-top: 2%;
 			  &::before{
 				  width: 800%;
-				  left: 400%;
 			  }
 		  }
 		  &--js{
 			margin-top: 2%;
 			&::before{
 				width: 600%;
-				left: 600%;
 			}
 		}
 		&--sass{
 			margin-top: 2%;
 			&::before{
 				width: 800%;
-				left: 400%;
 			}
 		}
 		&--b{
 			margin-top: 2%;
 			&::before{
 				width: 700%;
-				left: 500%;
 			}
 		}
 		&--react{
 			margin-top: 2%;
 			&::before{
 				width: 500%;
-				left: 700%;
 			}
 		}
 			&--ps{
@@ -686,7 +684,7 @@ main{
 		&__data{
 			display: flex;
 			margin: 4% 0;
-			align-content: end;
+			align-content: center;
 			font-size: 2.4rem;
 			& svg{
 				margin:0 6% ;
@@ -699,7 +697,7 @@ main{
 		width: 50%;
 		padding: 0 4%;
 		& p{
-			font-size: 2.4rem;
+			// font-size: 2.4rem;
 			padding:0.5%;
 		}
 		& ul{
@@ -714,6 +712,8 @@ main{
 			// border:1px black solid;
 			border-radius: 50px;
 			padding: 3px;
+			height: 50px;
+			width: 50px;
 			&:hover{
 					background-color: #000;
 			}
@@ -752,7 +752,7 @@ main{
 				font-size: 4.4rem;
 			}
 		}
-		& img{
+		& svg{
 			display: inline-block;
 			width: 30%;
 			height: auto;
@@ -795,8 +795,10 @@ main{
 		  }
 		}
 
-		@media (min-width: 1200px) {
+		@media (max-width: 1400px) {
+
 			.services{
+				height: 60vh;
 				& div:nth-of-type(even){
 		          padding-top: 6%;
 	            }
@@ -813,9 +815,6 @@ main{
 				&::before{
 		          left: -2rem;
 		          font-size: 26rem;
-	            }
-	            &__container{
-	            	
 	            }
 	            &__btn{
                    font-size: 2.2rem;
@@ -834,13 +833,7 @@ main{
             }
 
             .contacts{
-            	height: 60vh;
-            	&__socials{
-            		& li{
-            			width: 50px;
-            			height: 50px;
-            		}
-            	}
+            	height: 55vh;
             }    
             .base{
             	&__logo{
@@ -857,7 +850,273 @@ main{
             	}
             }
 		}
-		@media (max-width: 1024px) { 
+        @media (max-width: 1200px) {
+        	.about{
+        		&__btn{
+        			width: 26%;
+        		}
+        	}
+        	.portfolio{
+        		height: 200vh;
+        		&::before{
+        			font-size: 22rem;
+        		}
+        		&__btn{
+        			width: 26%;
+        			height: 4%;
+        		}
+        	}
+            .skills{
+            			&__front{
+					&--left{
+						margin-left: 10%;
+						&::after{
+
+						}
+						&::before{
+							// left:150%;
+						}
+					}
+				}
+                &__web{
+                	&--left{
+                         margin-left:80% ;
+                         &::after{
+							left:-750%;
+                         	width: 700%;
+						}      
+                	}
+                }
+                  &__ui{
+            	padding: 4rem 10rem 0;
+            }
+            }
+            .bio{
+            	height: 80vh;
+            }
+            .contacts{
+            	height: 60vh;
+            }
+        } 
+        @media (max-width: 1024px) { 
+        		.home{
+        			&__title{
+        			font-size: 10rem;	
+        			}
+                 &__text{
+                   width: 80%;
+                   text-align: justify;
+                 	font-size: 2.2rem;
+                 	margin-top: 4rem;
+                 }
+			}
+			.services{
+				height: 60vh;
+			}
+			.about{
+				height: 95vh;
+				padding: 0 2rem;
+				&__pct{
+					width: 50%;
+				}
+				&__btn{
+					width: 38%;
+					height: 10%;
+					font-size: 3rem;	
+				}
+			}
+			.portfolio{
+				height: 190vh;
+				&::before{
+					font-size: 24rem;
+				}
+                &__container{
+                 		padding: 0 4rem 3rem;
+                 }
+                 &__pct{
+                 	margin: 2rem 0;
+                 }
+                 &__btn{
+                 	margin: 2rem auto;
+                 	height: 5.5%;
+                 	width: 35%;
+                 	font-size: 3rem;
+                 }
+			}
+			.skills{
+				height: 120vh;
+				&__front{
+					&--left{
+						margin-left: 15%;
+						&::after{
+							left:150%;
+                         	width: 700%;
+						}
+						&::before{
+							left:150%;
+						}
+					}
+				}
+                &__web{
+                	&--left{
+                         margin-left:75% ;
+                         &::after{
+							left:-750%;
+                         	width: 700%;
+						}      
+                	}
+                }
+                &__pct{
+                	  &--html{
+			  &::before{
+			  	width: 500%;
+			  }
+		  }
+		  &--css{
+			  &::before{
+				  width: 500%;
+			  }
+		  }
+		  &--js{
+			&::before{
+				width: 450%;
+			}
+		}
+		&--sass{
+			&::before{
+				width: 470%;
+			}
+		}
+		&--b{
+			&::before{
+				width: 490%;
+			}
+		}
+		&--react{
+			&::before{
+				width: 350%;
+			}
+		}
+			&--ps{
+				&::before{
+					width: 500%;
+					left: -550%;
+				}
+			}
+			&--xd{
+				&::before{
+					width: 450%;
+					left: -500%;
+				}
+			}
+			&--figma{
+				&::before{
+					width: 450%;
+					left: -500%;
+				}
+			}
+			&--id{
+				&::before{
+					width: 350%;
+					left: -400%;
+				}
+			}
+			&--ai{
+				&::before{
+					width: 300%;
+					left: -350%;
+				}
+				
+			}
+                }
+            &__ui{
+            	padding: 4rem 10rem 0;
+            }
+			}
+			.bio{
+
+	  height: 95vh;
+	  padding:3rem 2rem;
+	  &__title{
+		  &::before{
+			  margin-right:5rem;
+			}
+			&::after{
+				margin-left:5rem;
+			}
+	  }
+      &__text{
+		  font-size: 2.8rem;
+		  text-align:justify;
+		  width: 80%;
+		  margin: 2rem auto;
+	  } 
+
+			}
+			.contacts{
+				height: 50vh;	
+              padding: 3rem 4rem;
+			&__info{
+				padding: 6% 2%;
+			}
+			&__socials{
+				padding: 0 2%;
+			}
+			}
+			.base{
+				&__logo{
+					width: 22rem;
+				}
+				&__data{
+					font-size:1.8rem ;
+
+				}
+				&__cta{
+					font-size: 3.6rem;
+					width: 40%;	
+				}
+				&__info{
+					width: 30%;	
+				}	
+			} }
+		@media (max-width: 992px) {
+            	.home{
+            	 &__title{
+            	 	font-size: 6rem;
+                    padding-top: 16%;
+            	 }	
+                 &__text{
+                   width: 80%;
+                   text-align: justify;
+                 	font-size: 1.8rem;
+                 	margin-top: 2rem;
+                 }
+			    }
+			    .services{
+			    	height: 85vh;
+			    }
+			    .about{
+			    	height: 150vh;
+			    }
+			    .portfolio{
+                    height: 295vh;
+                    &::before{
+                    	font-size: 20rem;
+                    }
+			    }
+			    .skills{
+			    	height: 210vh;
+			    }
+			    .bio{
+			    	height: 220vh;
+			    }
+			    .contacts{
+			    	height: 95vh;
+			    }
+
+		  }
+
+		@media (max-width: 768px) { 
 			.home{
                  &__text{
                    width: 80%;
@@ -865,7 +1124,6 @@ main{
                  	font-size: 2.2rem;
                  	margin-top: 6rem;
                  }
-
 			}
 			.services{
 				height: 40vh;
@@ -886,8 +1144,7 @@ main{
 				&__btn{
 					width: 40%;
 					height: 7%;
-					font-size: 3rem;
-					
+					font-size: 3rem;	
 				}
 			}
 			.portfolio{
@@ -909,6 +1166,7 @@ main{
                  }
 			}
 			.skills{
+				height: 85vh;
 				&__front{
 					&--left{
 						margin-left: 5%;
@@ -916,16 +1174,86 @@ main{
 							left:150%;
                          	width: 600%;
 						}
+						&::before{
+							left:150%;
+						}
 					}
 				}
                 &__web{
                 	&--left{
+                         margin-left:85% ;
                          &::after{
-							left:-1050%;
+							left:-650%;
                          	width: 600%;
 						}      
                 	}
                 }
+                &__pct{
+                	  &--html{
+			  &::before{
+			  	width: 500%;
+			  }
+		  }
+		  &--css{
+			  &::before{
+				  width: 500%;
+			  }
+		  }
+		  &--js{
+			&::before{
+				width: 450%;
+			}
+		}
+		&--sass{
+			&::before{
+				width: 470%;
+			}
+		}
+		&--b{
+			&::before{
+				width: 490%;
+			}
+		}
+		&--react{
+			&::before{
+				width: 350%;
+			}
+		}
+			&--ps{
+				&::before{
+					width: 500%;
+					left: -550%;
+				}
+			}
+			&--xd{
+				&::before{
+					width: 450%;
+					left: -500%;
+				}
+			}
+			&--figma{
+				&::before{
+					width: 450%;
+					left: -500%;
+				}
+			}
+			&--id{
+				&::before{
+					width: 350%;
+					left: -400%;
+				}
+			}
+			&--ai{
+				&::before{
+					width: 300%;
+					left: -350%;
+				}
+				
+			}
+                }
+            // &__ui{
+            // 	padding: 4rem 10rem 0;
+            // }
 			}
 			.bio{
 
@@ -946,11 +1274,31 @@ main{
 		  margin: 2rem auto;
 	  } 
 
+			}
+			.contacts{
+				height: 40vh;	
+              padding: 3rem 4rem;
+			&__info{
+				padding: 12% 2%;
+			}
+			}
+			.base{
+				&__logo{
+					width: 22rem;
+				}
+				&__data{
+					font-size:1.8rem ;
+				}
+				&__cta{
+					font-size: 3.6rem;
+					width: 40%;	
+				}
+				&__info{
+					width: 30%;	
+				}	
 			}		
 		 }
-		@media (min-width: 992px) {  }
-
-        @media (min-width: 768px) {  }
+	
 			@media (max-width: 576px) {
 				.home{
 					&__title{

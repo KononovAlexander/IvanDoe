@@ -808,6 +808,8 @@ main {
       margin-left: 20%; }
       .skills__front--left::after {
         left: 200%; }
+      .skills__front--left::before {
+        left: 200%; }
     .skills__front::before {
       content: "";
       position: absolute;
@@ -839,39 +841,41 @@ main {
       background-color: #000;
       opacity: .5; }
   .skills__pct {
-    outline: 1px red solid;
     position: relative;
     width: 8rem;
-    height: 8rem; }
+    height: 8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
     .skills__pct--html {
       margin-top: 0; }
       .skills__pct--html::before {
-        left: 200%; }
+        width: 800%; }
     .skills__pct--css {
       margin-top: 2%; }
       .skills__pct--css::before {
-        width: 800%;
-        left: 400%; }
+        width: 800%; }
     .skills__pct--js {
       margin-top: 2%; }
       .skills__pct--js::before {
-        width: 600%;
-        left: 600%; }
+        width: 600%; }
     .skills__pct--sass {
       margin-top: 2%; }
       .skills__pct--sass::before {
-        width: 800%;
-        left: 400%; }
+        width: 800%; }
     .skills__pct--b {
       margin-top: 2%; }
       .skills__pct--b::before {
-        width: 700%;
-        left: 500%; }
+        width: 700%; }
     .skills__pct--react {
       margin-top: 2%; }
       .skills__pct--react::before {
-        width: 500%;
-        left: 700%; }
+        width: 500%; }
     .skills__pct--ps {
       margin-top: 0; }
       .skills__pct--ps::before {
@@ -1027,8 +1031,8 @@ main {
     display: -ms-flexbox;
     display: flex;
     margin: 4% 0;
-    -ms-flex-line-pack: end;
-    align-content: end;
+    -ms-flex-line-pack: center;
+    align-content: center;
     font-size: 2.4rem; }
     .contacts__data svg {
       margin: 0 6%;
@@ -1038,7 +1042,6 @@ main {
     width: 50%;
     padding: 0 4%; }
     .contacts__socials p {
-      font-size: 2.4rem;
       padding: 0.5%; }
     .contacts__socials ul {
       list-style: none;
@@ -1056,7 +1059,9 @@ main {
     .contacts__socials li {
       margin: 2.5% 10%;
       border-radius: 50px;
-      padding: 3px; }
+      padding: 3px;
+      height: 50px;
+      width: 50px; }
       .contacts__socials li:hover {
         background-color: #000; }
       .contacts__socials li svg {
@@ -1095,7 +1100,7 @@ main {
       font-size: 3.8rem; }
     .base__logo span:last-child {
       font-size: 4.4rem; }
-  .base img {
+  .base svg {
     display: inline-block;
     width: 30%;
     height: auto; }
@@ -1137,9 +1142,11 @@ main {
   .base__line {
     width: 100%; }
 
-@media (min-width: 1200px) {
-  .services div:nth-of-type(even) {
-    padding-top: 6%; }
+@media (max-width: 1400px) {
+  .services {
+    height: 60vh; }
+    .services div:nth-of-type(even) {
+      padding-top: 6%; }
   .about {
     height: 100vh; }
     .about__btn {
@@ -1161,10 +1168,7 @@ main {
     .bio__text {
       font-size: 2.2rem; }
   .contacts {
-    height: 60vh; }
-    .contacts__socials li {
-      width: 50px;
-      height: 50px; }
+    height: 55vh; }
   .base__logo {
     width: 26rem; }
   .base__cta {
@@ -1174,7 +1178,159 @@ main {
   .base span {
     margin-top: 1%; } }
 
+@media (max-width: 1200px) {
+  .about__btn {
+    width: 26%; }
+  .portfolio {
+    height: 200vh; }
+    .portfolio::before {
+      font-size: 22rem; }
+    .portfolio__btn {
+      width: 26%;
+      height: 4%; }
+  .skills__front--left {
+    margin-left: 10%; }
+  .skills__web--left {
+    margin-left: 80%; }
+    .skills__web--left::after {
+      left: -750%;
+      width: 700%; }
+  .skills__ui {
+    padding: 4rem 10rem 0; }
+  .bio {
+    height: 80vh; }
+  .contacts {
+    height: 60vh; } }
+
 @media (max-width: 1024px) {
+  .home__title {
+    font-size: 10rem; }
+  .home__text {
+    width: 80%;
+    text-align: justify;
+    font-size: 2.2rem;
+    margin-top: 4rem; }
+  .services {
+    height: 60vh; }
+  .about {
+    height: 95vh;
+    padding: 0 2rem; }
+    .about__pct {
+      width: 50%; }
+    .about__btn {
+      width: 38%;
+      height: 10%;
+      font-size: 3rem; }
+  .portfolio {
+    height: 190vh; }
+    .portfolio::before {
+      font-size: 24rem; }
+    .portfolio__container {
+      padding: 0 4rem 3rem; }
+    .portfolio__pct {
+      margin: 2rem 0; }
+    .portfolio__btn {
+      margin: 2rem auto;
+      height: 5.5%;
+      width: 35%;
+      font-size: 3rem; }
+  .skills {
+    height: 120vh; }
+    .skills__front--left {
+      margin-left: 15%; }
+      .skills__front--left::after {
+        left: 150%;
+        width: 700%; }
+      .skills__front--left::before {
+        left: 150%; }
+    .skills__web--left {
+      margin-left: 75%; }
+      .skills__web--left::after {
+        left: -750%;
+        width: 700%; }
+    .skills__pct--html::before {
+      width: 500%; }
+    .skills__pct--css::before {
+      width: 500%; }
+    .skills__pct--js::before {
+      width: 450%; }
+    .skills__pct--sass::before {
+      width: 470%; }
+    .skills__pct--b::before {
+      width: 490%; }
+    .skills__pct--react::before {
+      width: 350%; }
+    .skills__pct--ps::before {
+      width: 500%;
+      left: -550%; }
+    .skills__pct--xd::before {
+      width: 450%;
+      left: -500%; }
+    .skills__pct--figma::before {
+      width: 450%;
+      left: -500%; }
+    .skills__pct--id::before {
+      width: 350%;
+      left: -400%; }
+    .skills__pct--ai::before {
+      width: 300%;
+      left: -350%; }
+    .skills__ui {
+      padding: 4rem 10rem 0; }
+  .bio {
+    height: 95vh;
+    padding: 3rem 2rem; }
+    .bio__title::before {
+      margin-right: 5rem; }
+    .bio__title::after {
+      margin-left: 5rem; }
+    .bio__text {
+      font-size: 2.8rem;
+      text-align: justify;
+      width: 80%;
+      margin: 2rem auto; }
+  .contacts {
+    height: 50vh;
+    padding: 3rem 4rem; }
+    .contacts__info {
+      padding: 6% 2%; }
+    .contacts__socials {
+      padding: 0 2%; }
+  .base__logo {
+    width: 22rem; }
+  .base__data {
+    font-size: 1.8rem; }
+  .base__cta {
+    font-size: 3.6rem;
+    width: 40%; }
+  .base__info {
+    width: 30%; } }
+
+@media (max-width: 992px) {
+  .home__title {
+    font-size: 6rem;
+    padding-top: 16%; }
+  .home__text {
+    width: 80%;
+    text-align: justify;
+    font-size: 1.8rem;
+    margin-top: 2rem; }
+  .services {
+    height: 85vh; }
+  .about {
+    height: 150vh; }
+  .portfolio {
+    height: 295vh; }
+    .portfolio::before {
+      font-size: 20rem; }
+  .skills {
+    height: 210vh; }
+  .bio {
+    height: 220vh; }
+  .contacts {
+    height: 95vh; } }
+
+@media (max-width: 768px) {
   .home__text {
     width: 80%;
     text-align: justify;
@@ -1214,14 +1370,47 @@ main {
       height: 5.5%;
       width: 35%;
       font-size: 3rem; }
-  .skills__front--left {
-    margin-left: 5%; }
-    .skills__front--left::after {
-      left: 150%;
-      width: 600%; }
-  .skills__web--left::after {
-    left: -1050%;
-    width: 600%; }
+  .skills {
+    height: 85vh; }
+    .skills__front--left {
+      margin-left: 5%; }
+      .skills__front--left::after {
+        left: 150%;
+        width: 600%; }
+      .skills__front--left::before {
+        left: 150%; }
+    .skills__web--left {
+      margin-left: 85%; }
+      .skills__web--left::after {
+        left: -650%;
+        width: 600%; }
+    .skills__pct--html::before {
+      width: 500%; }
+    .skills__pct--css::before {
+      width: 500%; }
+    .skills__pct--js::before {
+      width: 450%; }
+    .skills__pct--sass::before {
+      width: 470%; }
+    .skills__pct--b::before {
+      width: 490%; }
+    .skills__pct--react::before {
+      width: 350%; }
+    .skills__pct--ps::before {
+      width: 500%;
+      left: -550%; }
+    .skills__pct--xd::before {
+      width: 450%;
+      left: -500%; }
+    .skills__pct--figma::before {
+      width: 450%;
+      left: -500%; }
+    .skills__pct--id::before {
+      width: 350%;
+      left: -400%; }
+    .skills__pct--ai::before {
+      width: 300%;
+      left: -350%; }
   .bio {
     height: 95vh;
     padding: 3rem 2rem; }
@@ -1233,7 +1422,21 @@ main {
       font-size: 2.8rem;
       text-align: justify;
       width: 80%;
-      margin: 2rem auto; } }
+      margin: 2rem auto; }
+  .contacts {
+    height: 40vh;
+    padding: 3rem 4rem; }
+    .contacts__info {
+      padding: 12% 2%; }
+  .base__logo {
+    width: 22rem; }
+  .base__data {
+    font-size: 1.8rem; }
+  .base__cta {
+    font-size: 3.6rem;
+    width: 40%; }
+  .base__info {
+    width: 30%; } }
 
 @media (max-width: 576px) {
   .home__title {

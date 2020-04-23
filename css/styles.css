@@ -393,12 +393,15 @@ html {
 body {
   font-size: 1.8rem;
   line-height: 1.6;
-  min-height: 100%; }
+  min-height: 100%;
+  width: 100vw; }
 
 main {
   font-family: "Arimo";
-  overflow: hidden;
-  background-color: #000; }
+  background-color: #000;
+  margin: 0;
+  width: 100%;
+  overflow: hidden; }
 
 .logo {
   text-align: center;
@@ -616,8 +619,9 @@ main {
     font-size: 2rem;
     overflow: hidden; }
   .services__pct {
-    width: 20%;
+    width: 40%;
     height: auto;
+    margin: 0 auto;
     display: inline-block; }
 
 .about {
@@ -637,7 +641,7 @@ main {
     font-size: 5rem;
     padding: 3rem 0;
     margin: 0; }
-  .about__txt {
+  .about__text {
     width: 55%;
     text-align: left;
     height: auto;
@@ -655,23 +659,39 @@ main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin: 2rem 0; }
   .about__icon {
-    width: 5%;
-    height: auto;
-    margin-right: 2rem; }
+    width: 8%;
+    margin-right: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
     .about__icon svg {
       width: 100%;
       height: auto; }
+  .about__str {
+    line-height: 2.8rem; }
   .about__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
     margin: 4rem auto;
     color: #1c80a1;
     width: 16%;
     height: 8%;
     border-radius: 50px;
     border: 4px solid #1c80a1;
-    font-size: 2.6rem;
-    line-height: 5rem;
     letter-spacing: 4px;
     word-spacing: 8px;
     cursor: pointer; }
@@ -701,6 +721,7 @@ main {
   .portfolio__title {
     font-size: 5rem;
     padding: 3rem 0;
+    position: relative;
     margin: 0;
     font-weight: 400;
     color: #292929; }
@@ -709,6 +730,10 @@ main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
     width: 100%;
     height: auto;
     -ms-flex-wrap: wrap;
@@ -718,7 +743,7 @@ main {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 3rem 12rem;
+    padding: 0 12rem 3rem;
     z-index: 1; }
     .portfolio__container--rev {
       -webkit-box-orient: horizontal;
@@ -737,6 +762,14 @@ main {
   .portfolio__btn {
     position: relative;
     margin: 4rem auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
     color: #1c80a1;
     width: 16%;
     height: 3%;
@@ -771,6 +804,10 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed; }
+    .skills__front--left {
+      margin-left: 20%; }
+      .skills__front--left::after {
+        left: 200%; }
     .skills__front::before {
       content: "";
       position: absolute;
@@ -788,6 +825,10 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed; }
+    .skills__web--left {
+      margin-left: 80%; }
+      .skills__web--left::after {
+        left: -1100%; }
     .skills__web::before {
       content: "";
       position: absolute;
@@ -798,97 +839,64 @@ main {
       background-color: #000;
       opacity: .5; }
   .skills__pct {
+    outline: 1px red solid;
     position: relative;
     width: 8rem;
     height: 8rem; }
     .skills__pct--html {
-      margin-left: 20%;
       margin-top: 0; }
       .skills__pct--html::before {
-        width: 800%;
-        left: 400%; }
-      .skills__pct--html::after {
         left: 200%; }
     .skills__pct--css {
-      margin-left: 20%;
       margin-top: 2%; }
       .skills__pct--css::before {
         width: 800%;
         left: 400%; }
-      .skills__pct--css::after {
-        left: 200%; }
     .skills__pct--js {
-      margin-left: 20%;
       margin-top: 2%; }
       .skills__pct--js::before {
         width: 600%;
         left: 600%; }
-      .skills__pct--js::after {
-        left: 200%; }
     .skills__pct--sass {
-      margin-left: 20%;
       margin-top: 2%; }
       .skills__pct--sass::before {
         width: 800%;
         left: 400%; }
-      .skills__pct--sass::after {
-        left: 200%; }
     .skills__pct--b {
-      margin-left: 20%;
       margin-top: 2%; }
       .skills__pct--b::before {
         width: 700%;
         left: 500%; }
-      .skills__pct--b::after {
-        left: 200%; }
     .skills__pct--react {
-      margin-left: 20%;
       margin-top: 2%; }
       .skills__pct--react::before {
         width: 500%;
         left: 700%; }
-      .skills__pct--react::after {
-        left: 200%; }
     .skills__pct--ps {
-      margin-left: 80%;
       margin-top: 0; }
       .skills__pct--ps::before {
         width: 900%;
         left: -1000%; }
-      .skills__pct--ps::after {
-        left: -1100%; }
     .skills__pct--xd {
-      margin-left: 80%;
       margin-top: 2%; }
       .skills__pct--xd::before {
         width: 950%;
         left: -1050%; }
-      .skills__pct--xd::after {
-        left: -1100%; }
     .skills__pct--figma {
-      margin-left: 80%;
       margin-top: 2%; }
       .skills__pct--figma::before {
         width: 800%;
         left: -900%; }
-      .skills__pct--figma::after {
-        left: -1100%; }
     .skills__pct--id {
-      margin-left: 80%;
       margin-top: 2%; }
       .skills__pct--id::before {
         width: 700%;
         left: -800%; }
-      .skills__pct--id::after {
-        left: -1100%; }
     .skills__pct--ai {
-      margin-left: 80%;
       margin-top: 2%; }
       .skills__pct--ai::before {
         width: 600%;
         left: -700%; }
-      .skills__pct--ai::after {
-        left: -1100%; }
     .skills__pct::before {
       content: "";
       height: 6px;
@@ -1135,18 +1143,13 @@ main {
   .about {
     height: 100vh; }
     .about__btn {
-      margin: 1rem auto;
-      width: 20%;
-      height: 8%;
-      border-radius: 50px;
-      border: 4px solid #1c80a1;
-      font-size: 2.2rem;
-      line-height: 4.6rem; }
+      margin: 2rem auto;
+      font-size: 2.2rem; }
   .portfolio {
-    height: 250vh; }
+    height: 255vh; }
     .portfolio::before {
       left: -2rem;
-      font-size: 28rem; }
+      font-size: 26rem; }
     .portfolio__btn {
       font-size: 2.2rem;
       margin: 1rem auto;
@@ -1170,3 +1173,68 @@ main {
     font-size: 2.2rem; }
   .base span {
     margin-top: 1%; } }
+
+@media (max-width: 1024px) {
+  .home__text {
+    width: 80%;
+    text-align: justify;
+    font-size: 2.2rem;
+    margin-top: 6rem; }
+  .services {
+    height: 40vh; }
+  .about {
+    height: 95vh;
+    padding: 0 2rem; }
+    .about__content {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .about__text {
+      width: 100%; }
+    .about__pct {
+      width: 50%; }
+    .about__btn {
+      width: 40%;
+      height: 7%;
+      font-size: 3rem; }
+  .portfolio {
+    height: 115vh; }
+    .portfolio::before {
+      font-size: 20rem; }
+    .portfolio__container {
+      padding: 0 4rem 3rem; }
+    .portfolio__pct {
+      margin: 2rem 0; }
+    .portfolio__btn {
+      margin: 2rem auto;
+      height: 5.5%;
+      width: 35%;
+      font-size: 3rem; }
+  .skills__front--left {
+    margin-left: 5%; }
+    .skills__front--left::after {
+      left: 150%;
+      width: 600%; }
+  .skills__web--left::after {
+    left: -1050%;
+    width: 600%; }
+  .bio {
+    height: 95vh;
+    padding: 3rem 2rem; }
+    .bio__title::before {
+      margin-right: 5rem; }
+    .bio__title::after {
+      margin-left: 5rem; }
+    .bio__text {
+      font-size: 2.8rem;
+      text-align: justify;
+      width: 80%;
+      margin: 2rem auto; } }
+
+@media (max-width: 576px) {
+  .home__title {
+    font-size: 4.2rem; } }

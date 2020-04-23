@@ -22,11 +22,15 @@ body{
 	font-size: 1.8rem;
 	line-height: 1.6;
 	min-height: 100%;
+   width: 100vw;
+
 }
 main{
    font-family: $main;
-   overflow: hidden;
    background-color: #000;
+   margin: 0;
+   width: 100%;
+   overflow: hidden;
 }
 .logo{
 	text-align: center;
@@ -122,6 +126,8 @@ main{
 		left: -25rem;
 		bottom: 0;
 		width: 25rem;
+		// opacity: .9;
+		// background-color: #fff;
 		@include tr(.1s);
 		z-index: 1;
 	}
@@ -177,6 +183,7 @@ main{
 .home{
 	width: 100%;
 	height: 100vh;
+	// padding: 0 8rem;
 	text-align: center;
 	background-image: url(../img/manCofeeLaptop.jpg);
 	background-size: cover;
@@ -222,6 +229,7 @@ main{
 	font-size: 0;
 	color: #fff;
 	text-align: center;
+	// padding: 0 8rem;
 	& div:nth-of-type(even){
 		padding-top: 10%;
 	}
@@ -240,8 +248,9 @@ main{
 		overflow: hidden;
 	}
 	&__pct{
-		width: 20%;
+		width: 40%;
 		height: auto;
+		margin: 0 auto;
 		display: inline-block;  		
 	}
 }
@@ -262,7 +271,7 @@ main{
 		padding: 3rem 0;
 		margin: 0;
 	}
-	&__txt{
+	&__text{
 		width: 55%;
 		text-align: left;
 		height:auto;
@@ -282,26 +291,32 @@ main{
 	}
 	&__item{
 		display: flex;
+		align-items: center;
 		margin: 2rem 0;
 	}
 	&__icon {
-		width: 5%;
-		height: auto;
+		width: 8%;
 		margin-right: 2rem;
+		display: flex;
+		align-items: center;
 		svg{
 			width:100%;
 			height: auto;
 		}
 	}
+	&__str{
+		line-height: 2.8rem;
+	}
 	&__btn{
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
 		margin: 4rem auto;
 		color:#1c80a1;
 		width: 16%;
 		height: 8%;
 		border-radius:50px;
 		border: 4px solid #1c80a1;
-		font-size: 2.6rem;
-		line-height: 5rem;
 		letter-spacing: 4px;
 		word-spacing: 8px;
 		cursor: pointer;
@@ -331,6 +346,7 @@ main{
 	&__title{
 		font-size: 5rem;
 		padding: 3rem 0;
+		position: relative;
 		margin: 0;
 		font-weight: 400;
 		color:#292929;
@@ -338,12 +354,13 @@ main{
 	&__container{
 		position: relative;
 		display: flex;
+		flex-direction: row;
 		width: 100%;
 		height: auto;
 		flex-wrap: wrap;
 		align-content: center;
 		justify-content: space-between;
-		padding: 3rem 12rem;
+		padding: 0 12rem 3rem;
 		z-index: 1;
 		&--rev{
 			flex-direction: row-reverse;
@@ -365,6 +382,9 @@ main{
 	&__btn{
 		position: relative;
 		margin: 4rem auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
 		color:#1c80a1;
 		width: 16%;
 		height: 3%;
@@ -403,6 +423,13 @@ main{
 		  background-position: center;
 		  background-repeat: no-repeat;
 		  background-attachment: fixed;
+		  &--left{
+           margin-left: 20%;
+           	&::after{
+		  		left:200%;
+		  	}
+		  }
+		 
 		  &::before{
 			content:"";
 			position: absolute;
@@ -422,6 +449,12 @@ main{
 		  background-position: center;
 		  background-repeat: no-repeat;
 		  background-attachment: fixed;
+		  &--left{
+		  	margin-left: 80%;
+		  	&::after{
+					left: -1100%;
+				}
+		  }
 		  &::before{
 			content:"";
 			position: absolute;
@@ -434,129 +467,87 @@ main{
 		}
 	  }
 	  &__pct{
+	  	  outline: 1px red solid;
 		  position: relative;
 		  width: 8rem;
 		  height: 8rem;
 		  &--html{
-			margin-left: 20%;
 			margin-top: 0;
 			  &::before{
-				  width: 800%;
-				  left: 400%;
-			  }
-			  &::after{
-			    left: 200%;
+				  // width: 800%;
+				  left: 200%;
 			  }
 		  }
 		  &--css{
-			margin-left: 20%;
 			margin-top: 2%;
 			  &::before{
 				  width: 800%;
 				  left: 400%;
 			  }
-			  &::after{
-			    left: 200%;
-			  }
 		  }
 		  &--js{
-			margin-left: 20%;
 			margin-top: 2%;
 			&::before{
 				width: 600%;
 				left: 600%;
 			}
-			&::after{
-			    left: 200%;
-			}
 		}
 		&--sass{
-			margin-left: 20%;
 			margin-top: 2%;
 			&::before{
 				width: 800%;
 				left: 400%;
 			}
-			&::after{
-			    left: 200%;
-			}
 		}
 		&--b{
-			margin-left: 20%;
 			margin-top: 2%;
 			&::before{
 				width: 700%;
 				left: 500%;
 			}
-			&::after{
-			    left: 200%;
-			}
 		}
 		&--react{
-			margin-left: 20%;
 			margin-top: 2%;
 			&::before{
 				width: 500%;
 				left: 700%;
 			}
-			&::after{
-			    left: 200%;
-			}
 		}
 			&--ps{
-				margin-left: 80%;
 				margin-top: 0;
 				&::before{
 					width: 900%;
 					left: -1000%;
 				}
-				&::after{
-					left: -1100%;
-				}
 			}
 			&--xd{
-				margin-left: 80%;
 				margin-top: 2%;
 				&::before{
 					width: 950%;
 					left: -1050%;
 				}
-				&::after{
-					left: -1100%;
-				}
 			}
 			&--figma{
-				margin-left: 80%;
 				margin-top: 2%;
 				&::before{
 					width: 800%;
 					left: -900%;
 				}
-				&::after{
-					left: -1100%;
-				}
 			}
 			&--id{
-				margin-left: 80%;
 				margin-top: 2%;
 				&::before{
 					width: 700%;
 					left: -800%;
 				}
-				&::after{
-					left: -1100%;
-				}
 			}
 			&--ai{
-				margin-left: 80%;
 				margin-top: 2%;
 				&::before{
 					width: 600%;
 					left: -700%;
 				}
-				&::after{
-					left: -1100%;
-				}
+				
 			}
 		  &::before{
 			 content:"";
@@ -625,9 +616,6 @@ main{
 			cursor: pointer;
 			  padding: 1rem;
 			  border:4px #fff solid;
-			  // & svg{
-			  // 	transform:rotate(180deg);
-			  // }
 			  &:hover{
 				   padding: 1.5rem;
 			  }
@@ -816,20 +804,18 @@ main{
 			.about{
 				height: 100vh;
 				&__btn{
-					margin: 1rem auto;
-				    width: 20%;
-		            height: 8%;
-		            border-radius:50px;
-		            border: 4px solid #1c80a1;
+					margin: 2rem auto;
 	                font-size: 2.2rem;
-		            line-height: 4.6rem;
 				}
 			}
 			.portfolio{
-				height: 250vh;
+				height: 255vh;
 				&::before{
 		          left: -2rem;
-		          font-size: 28rem;
+		          font-size: 26rem;
+	            }
+	            &__container{
+	            	
 	            }
 	            &__btn{
                    font-size: 2.2rem;
@@ -871,6 +857,110 @@ main{
             	}
             }
 		}
+		@media (max-width: 1024px) { 
+			.home{
+                 &__text{
+                   width: 80%;
+                   text-align: justify;
+                 	font-size: 2.2rem;
+                 	margin-top: 6rem;
+                 }
+
+			}
+			.services{
+				height: 40vh;
+			}
+			.about{
+				height: 95vh;
+				padding: 0 2rem;
+				&__content{
+					flex-direction: column-reverse;
+                    align-items: center;
+				}
+				&__text{
+					width: 100%;
+				}
+				&__pct{
+					width: 50%;
+				}
+				&__btn{
+					width: 40%;
+					height: 7%;
+					font-size: 3rem;
+					
+				}
+			}
+			.portfolio{
+				height: 115vh;
+				&::before{
+					font-size: 20rem;
+				}
+                &__container{
+                 		padding: 0 4rem 3rem;
+                 }
+                 &__pct{
+                 	margin: 2rem 0;
+                 }
+                 &__btn{
+                 	margin: 2rem auto;
+                 	height: 5.5%;
+                 	width: 35%;
+                 	font-size: 3rem;
+                 }
+			}
+			.skills{
+				&__front{
+					&--left{
+						margin-left: 5%;
+						&::after{
+							left:150%;
+                         	width: 600%;
+						}
+					}
+				}
+                &__web{
+                	&--left{
+                         &::after{
+							left:-1050%;
+                         	width: 600%;
+						}      
+                	}
+                }
+			}
+			.bio{
+
+	  height: 95vh;
+	  padding:3rem 2rem;
+	  &__title{
+		  &::before{
+			  margin-right:5rem;
+			}
+			&::after{
+				margin-left:5rem;
+			}
+	  }
+      &__text{
+		  font-size: 2.8rem;
+		  text-align:justify;
+		  width: 80%;
+		  margin: 2rem auto;
+	  } 
+
+			}		
+		 }
+		@media (min-width: 992px) {  }
+
+        @media (min-width: 768px) {  }
+			@media (max-width: 576px) {
+				.home{
+					&__title{
+						font-size: 4.2rem;
+					}
+					&__text{
+
+					}
+				}
+			}
 	
 	  
   

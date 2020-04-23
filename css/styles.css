@@ -1211,7 +1211,7 @@ main {
     font-size: 2.2rem;
     margin-top: 4rem; }
   .services {
-    height: 60vh; }
+    height: auto; }
   .about {
     height: 95vh;
     padding: 0 2rem; }
@@ -1222,7 +1222,7 @@ main {
       height: 10%;
       font-size: 3rem; }
   .portfolio {
-    height: 190vh; }
+    height: auto; }
     .portfolio::before {
       font-size: 24rem; }
     .portfolio__container {
@@ -1235,7 +1235,7 @@ main {
       width: 35%;
       font-size: 3rem; }
   .skills {
-    height: 120vh; }
+    height: auto; }
     .skills__front--left {
       margin-left: 15%; }
       .skills__front--left::after {
@@ -1278,7 +1278,7 @@ main {
     .skills__ui {
       padding: 4rem 10rem 0; }
   .bio {
-    height: 95vh;
+    height: auto;
     padding: 3rem 2rem; }
     .bio__title::before {
       margin-right: 5rem; }
@@ -1290,7 +1290,7 @@ main {
       width: 80%;
       margin: 2rem auto; }
   .contacts {
-    height: 50vh;
+    height: auto;
     padding: 3rem 4rem; }
     .contacts__info {
       padding: 6% 2%; }
@@ -1316,31 +1316,36 @@ main {
     font-size: 1.8rem;
     margin-top: 2rem; }
   .services {
-    height: 85vh; }
+    height: auto; }
   .about {
-    height: 150vh; }
+    height: auto;
+    padding: 2rem; }
   .portfolio {
-    height: 295vh; }
+    height: auto;
+    padding: 2rem; }
     .portfolio::before {
       font-size: 20rem; }
   .skills {
-    height: 210vh; }
+    height: auto; }
   .bio {
-    height: 220vh; }
+    height: auto; }
   .contacts {
-    height: 95vh; } }
+    height: auto; } }
 
 @media (max-width: 768px) {
-  .home__text {
-    width: 80%;
-    text-align: justify;
-    font-size: 2.2rem;
-    margin-top: 6rem; }
+  .home {
+    height: auto; }
+    .home__text {
+      width: 80%;
+      text-align: justify;
+      font-size: 2.2rem;
+      margin-top: 6rem; }
   .services {
-    height: 40vh; }
+    height: auto;
+    padding: 2rem; }
   .about {
-    height: 95vh;
-    padding: 0 2rem; }
+    height: auto;
+    padding: 2rem; }
     .about__content {
       -webkit-box-orient: vertical;
       -webkit-box-direction: reverse;
@@ -1358,9 +1363,9 @@ main {
       height: 7%;
       font-size: 3rem; }
   .portfolio {
-    height: 115vh; }
+    height: auto; }
     .portfolio::before {
-      font-size: 20rem; }
+      font-size: 16rem; }
     .portfolio__container {
       padding: 0 4rem 3rem; }
     .portfolio__pct {
@@ -1371,7 +1376,7 @@ main {
       width: 35%;
       font-size: 3rem; }
   .skills {
-    height: 85vh; }
+    height: auto; }
     .skills__front--left {
       margin-left: 5%; }
       .skills__front--left::after {
@@ -1412,7 +1417,7 @@ main {
       width: 300%;
       left: -350%; }
   .bio {
-    height: 95vh;
+    height: auto;
     padding: 3rem 2rem; }
     .bio__title::before {
       margin-right: 5rem; }
@@ -1424,20 +1429,121 @@ main {
       width: 80%;
       margin: 2rem auto; }
   .contacts {
-    height: 40vh;
+    height: auto;
     padding: 3rem 4rem; }
     .contacts__info {
       padding: 12% 2%; }
   .base__logo {
-    width: 22rem; }
+    display: none; }
   .base__data {
     font-size: 1.8rem; }
   .base__cta {
     font-size: 3.6rem;
     width: 40%; }
   .base__info {
-    width: 30%; } }
+    width: 50%; } }
 
 @media (max-width: 576px) {
-  .home__title {
-    font-size: 4.2rem; } }
+  .home {
+    height: auto;
+    padding-bottom: 2rem; }
+    .home__title {
+      font-size: 4.2rem; }
+    .home__text {
+      font-size: 1.8rem; }
+  .services {
+    height: auto;
+    padding-bottom: 2rem; }
+    .services__title {
+      font-size: 3rem; }
+    .services__serv {
+      width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0; }
+  .about {
+    height: auto;
+    padding: 0 0 2rem; }
+    .about__text {
+      text-align: justify; }
+    .about__item {
+      width: 100%; }
+    .about__pct {
+      width: 80%; }
+    .about__icon {
+      width: 30%; }
+    .about__btn {
+      height: 5%;
+      width: 70%;
+      font-size: 2.2rem; }
+  .portfolio {
+    height: auto;
+    padding-bottom: 2rem; }
+    .portfolio::before {
+      display: none; }
+    .portfolio__container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+    .portfolio__pct {
+      padding: 0; }
+      .portfolio__pct:nth-child(odd) {
+        width: 100%; }
+      .portfolio__pct:nth-child(even) {
+        width: 100%; }
+    .portfolio__btn {
+      width: 70%;
+      height: 3%;
+      font-size: 2.2rem; }
+  .skills {
+    height: auto; }
+    .skills__front--left {
+      margin-left: 5%; }
+      .skills__front--left::after {
+        left: 125%;
+        width: 500%; }
+      .skills__front--left::before {
+        left: 125%; }
+    .skills__web--left {
+      margin-left: 85%; }
+      .skills__web--left::after {
+        left: -550%;
+        width: 500%; }
+    .skills__ui {
+      width: 100%;
+      padding: 3rem 1rem; }
+      .skills__ui p {
+        font-size: 2rem; }
+  .bio {
+    padding: 2rem 0 2rem; }
+    .bio__title::before {
+      display: none; }
+    .bio__title::after {
+      display: none; }
+    .bio__text {
+      font-size: 2rem; }
+  .contacts {
+    padding: 0; }
+    .contacts__box {
+      height: auto;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+    .contacts__info {
+      width: 100%;
+      padding: 0; }
+    .contacts__socials {
+      width: 100%;
+      padding: 0; }
+      .contacts__socials ul {
+        padding-left: 0; }
+  .base {
+    padding: 1rem; }
+    .base__logo {
+      display: none; }
+    .base__cta {
+      width: 100%; }
+    .base__info {
+      width: 90%; } }

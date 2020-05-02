@@ -60,7 +60,7 @@ main{
 }
 .nav{
 	width: 100%;
-	height: 10vh;
+	height: auto;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -68,43 +68,16 @@ main{
 	background-color: transparent;
 	z-index: 2;
 	display: flex;
-	justify-content:space-between;
-	&__logo{
-		text-align: center;
-		padding-top: 1.8rem;
-		display: block;
-		width: 12rem;
-		height: 100%;
-		line-height: 2rem;
-		& a{
-			color:#8f8d8d;
-			text-decoration: none;
-			cursor: pointer;
-			@include tr(.05s);
-			&:hover{
-				color:#fff;
-			}
-		}
-		& span:first-child{
-			font-family: $logoW;
-			font-size: 1.8rem;
-		}
-		& span:last-child{
-			font-family: $logoF;
-			font-size: 2.4rem;
-			font-weight: 600;
-		}
-	}
+	align-items:  center;
+	justify-content:space-around;
 	&__menu{
+		// outline: 1px red solid; 
 		display: block;
-		width: 90%;
-		display: flex;
-		align-items: center;
-		padding: 0 4rem ;
 	}
 	&__burger{ 
 		position: relative;
 		cursor: pointer;
+		width: 100%;
 	}
 	#check_menu{
 		display:none;
@@ -121,28 +94,35 @@ main{
 	}
 	&__sidebar{
 		font-family: $main;
-		position: absolute;
-		top: 0;
-		left: -25rem;
-		bottom: 0;
-		width: 25rem;
+		// width: 100%;
+		// position: absolute;
+		// top: 0;
+		// left: -25rem;
+		// bottom: 0;
+		// width: 25rem;
 		// opacity: .9;
-		// background-color: #fff;
 		@include tr(.1s);
 		z-index: 1;
 	}
 	&__list{
+		// outline: 1px black solid;
+		// position: absolute;
+		display: flex;
 		list-style: none;
-		margin-top: 15rem;
-		width: 80%;
+		justify-content: space-around;
+		// flex-direction: column;
+		// margin-top: 15rem;
+		// width: 22rem;
+		// background-color: #fff;
+		// width: 100%;
 	}
 	&__item{
 		text-align: left;
-		margin: 3rem 0;
-		padding-left: 4rem;
+		margin: 0 3rem;
+		// padding-left: 4rem;
 		& a{
 			text-decoration: none;
-			color:#000;
+			color:#fff;
 			&:hover{
 				text-decoration-line: underline;
 				color:#fff;
@@ -153,7 +133,8 @@ main{
 		left:0;
 	}
 	&__line{
-		display: inline-block;	
+		// display: inline-block;
+		display: none;	
 		height: 3px;
 		width: 45px;
 		@include tr(.5s);
@@ -200,6 +181,36 @@ main{
 		right: 0;
 		left: 0;
 		opacity: .5;
+	}
+		&__logo{
+        position: absolute;
+        top:0;
+        left: 0;
+        // right: 0;
+		text-align: center;
+		padding-top: 1.8rem;
+		display: block;
+		width: 12rem;
+		height:auto;
+		z-index: 2;
+		& a{
+			color:#8f8d8d;
+			text-decoration: none;
+			cursor: pointer;
+			@include tr(.05s);
+			&:hover{
+				color:#fff;
+			}
+		}
+		& span:first-child{
+			font-family: $logoW;
+			font-size: 1.8rem;
+		}
+		& span:last-child{
+			font-family: $logoF;
+			font-size: 2.4rem;
+			font-weight: 600;
+		}
 	}
 	&__title{
 		margin: 0;

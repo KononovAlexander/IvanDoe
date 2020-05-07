@@ -18,29 +18,30 @@
 					<input type="checkbox" id="check_menu">
 					<div class="nav__line"></div>
 					<div class="nav__sidebar" >
-						<ul class="nav__list">
-							<li class="nav__item"><a href="#">Home</a></li>
-							<li class="nav__item"><a href="#">Services</a></li>
-							<li class="nav__item"><a href="#">About me</a></li>
-							<li class="nav__item"><a href="#">Portfolio</a></li>
-							<li class="nav__item"><a href="#">My skills</a></li>
-							<li class="nav__item"><a href="#">My biography</a></li>
-							<li class="nav__item"><a href="#">Contacts</a></li>
+						<ul class="nav__list scroll">
+							<li class="nav__item"><a href="#home">Home</a></li>
+							<li class="nav__item"><a href="#services">Services</a></li>
+							<li class="nav__item"><a href="#about">About me</a></li>
+							<li class="nav__item"><a href="#portfolio">Portfolio</a></li>
+							<li class="nav__item"><a href="#skills">My skills</a></li>
+							<li class="nav__item"><a href="#bio">My biography</a></li>
+							<li class="nav__item"><a href="#contacts">Contacts</a></li>
 						</ul>
 					</div>
 				</label>
 			</div>
-			<div class="nav__logo logo"><a href="#"><span> Web d'sign</span> <br> & <br><span> FrontEnd</span> </a></div>
+			
 		</nav>
 	</header>
 	
 		<main>
-			<section class="home">
+			<section class="home" id="home">
+				<div class="home__logo logo"><a href="#"><span> Web d'sign</span> <br> & <br><span> FrontEnd</span> </a></div>
 			   <h1 class="home__title">Ivan Doe</h1>
 			   <p class="home__text">skilled web-disigner and front end developer, expirienced in creating web sites and make it “Alive”. Ten years working on a lead company, i was  a creator of fife big projects that is popular for present day. And just a funny guy.	</p>
 			  
 			</section>
-			<section class="services">
+			<section class="services" id="services">
 				<h3 class="services__title">I can do for you</h3>
 				<div class="services__serv">
 					<div class="services__pct"><svg width="70" height="70"><use xlink:href='#tv'/></svg></div>
@@ -57,7 +58,7 @@
 						design for your site</p>
 				</div>
 			</section>
-			<section class="about">
+			<section class="about" id="about">
 				<h3 class="about__title">About me</h3>
 
 				<div class="about__content">
@@ -85,7 +86,7 @@
 			</div>
 			<div class="about__btn">Hire me</div>
 			</section>
-			<section class="portfolio">
+			<section class="portfolio" id="portfolio">
 				 <h3 class="portfolio__title">
 					My previous projects</h3>
 				 <div class="portfolio__container">
@@ -103,7 +104,7 @@
 				 </div>
 				 <div class="portfolio__btn">View more</div>
 			</section>
-			<section class="skills">
+			<section class="skills" id="skills">
 				<div class="skills__front">
 					<h3 class="skills__title">My skills</h3>
 					<div class="skills__pct skills__front--left skills__pct--html">
@@ -145,7 +146,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="bio">
+			<section class="bio" id="bio">
 				<h3 class="bio__title">My biography</h3>
 				<div class="bio__text"><p>Hi, my name is Ivan Doe and i am a designer, front end developer,
 					coffeeman.At the age of 18-th i run out of my home. Want to get rid 
@@ -161,7 +162,7 @@
 
 				
 			</section>
-			<section class="contacts">
+			<section class="contacts" id="contacts"> 
 				<h3 class="contacts__title">My contacts</h3>
 				<div class="contacts__box">
 					<div class="contacts__info">

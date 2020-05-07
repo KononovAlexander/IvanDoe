@@ -69,9 +69,8 @@ main{
 	z-index: 2;
 	display: flex;
 	align-items:  center;
-	justify-content:space-around;
+    justify-content: space-around;
 	&__menu{
-		// outline: 1px red solid; 
 		display: block;
 	}
 	&__burger{ 
@@ -94,27 +93,13 @@ main{
 	}
 	&__sidebar{
 		font-family: $main;
-		// width: 100%;
-		// position: absolute;
-		// top: 0;
-		// left: -25rem;
-		// bottom: 0;
-		// width: 25rem;
-		// opacity: .9;
 		@include tr(.1s);
 		z-index: 1;
 	}
 	&__list{
-		// outline: 1px black solid;
-		// position: absolute;
 		display: flex;
 		list-style: none;
 		justify-content: space-around;
-		// flex-direction: column;
-		// margin-top: 15rem;
-		// width: 22rem;
-		// background-color: #fff;
-		// width: 100%;
 	}
 	&__item{
 		text-align: left;
@@ -139,14 +124,14 @@ main{
 		width: 45px;
 		@include tr(.5s);
 		border-radius: 40%;
-		background-color: #000;
+		background-color: #fff;
 		&::before,
 		&::after{
 			content:"";
 			display: block;
 			height: 3px;
 			width: 45px;
-			background-color: #000;
+			background-color: inherit;
 			@include tr(.05s);
 		}
 		&::before{
@@ -164,7 +149,7 @@ main{
 .home{
 	width: 100%;
 	height: 100vh;
-	// padding: 0 8rem;
+	padding: 0 8rem;
 	text-align: center;
 	background-image: url(../img/manCofeeLaptop.jpg);
 	background-size: cover;
@@ -186,13 +171,6 @@ main{
         position: absolute;
         top:0;
         left: 0;
-        // right: 0;
-		text-align: center;
-		padding-top: 1.8rem;
-		display: block;
-		width: 12rem;
-		height:auto;
-		z-index: 2;
 		& a{
 			color:#8f8d8d;
 			text-decoration: none;
@@ -237,7 +215,6 @@ main{
 	background-color: #1c80a1;
 	width: 100%;
 	height: 60vh;
-	font-size: 0;
 	color: #fff;
 	text-align: center;
 	& div:nth-of-type(even){
@@ -350,7 +327,7 @@ main{
 		top: 0;
 		bottom: 0;
 		left: -3rem;
-		font-size: 35rem;
+		font-size: 30rem;
 		color:#52adbd;
 	}
 	&__title{
@@ -821,7 +798,8 @@ main{
 				}
 			}
 			.portfolio{
-				height: 255vh;
+				height: auto;
+				padding-bottom: 4rem;
 				&::before{
 		          left: -2rem;
 		          font-size: 26rem;
@@ -909,7 +887,21 @@ main{
             }
         } 
         @media (max-width: 1024px) { 
+                .nav{
+                	justify-content: flex-start;
+                	&__list{
+                		padding-left: 1rem;
+                		justify-content: flex-start;
+                	}
+                	&__item{
+                		font-size: 1.2rem;
+                		margin: 1rem;
+                	}
+                }
         		.home{
+        			&__logo{
+        				left: 76%;
+        			}
         			&__title{
         			font-size: 10rem;	
         			}
@@ -1125,9 +1117,7 @@ main{
 			    .contacts{
 			    	height: auto;
 			    }
-
 		  }
-
 		@media (max-width: 768px) { 
 			.home{
 				height: auto;
@@ -1314,9 +1304,43 @@ main{
 		 }
 	
 			@media (max-width: 576px) {
+				.nav{
+					justify-content: flex-start;
+                	#check_menu:checked ~ &__sidebar{
+                		left:0;
+                	}
+                   &__sidebar{
+                   	    outline: 1px red solid;
+		                position: absolute;
+		                left: -250%;
+	                }
+                	&__line{
+                		display: inline-block;
+                		margin-left: 70%;
+                		margin-top: 4rem;
+                	}
+                	&__list{
+                		position: absolute;
+                		display: flex;
+                		width: auto;
+                        padding-right: 3rem;
+                        padding-bottom: 2rem;
+                		flex-direction: column;
+                        background-color:#000;
+                        opacity: .8
+                	}
+                	&__item{
+                		width: 100%;
+                		margin: 2rem;
+                	}
+				}
 				.home{
 					height:auto;
 					padding-bottom: 2rem;
+					&__logo{
+						padding-top: 1rem;
+						left: 70%;
+					}
 					&__title{
 						font-size: 4.2rem;
 					}

@@ -254,7 +254,7 @@ main{
 	&__title{
 		font-size: 5rem;
 		margin: 0 ;
-		padding: 3rem 0;
+		padding: 3rem 0 3rem;
 		font-weight: 400;
 		letter-spacing:3px;
 	}
@@ -291,7 +291,7 @@ main{
 	}															
 	&__title{
 		font-size: 5rem;
-		padding: 3rem 0;
+		padding: 3rem 0 3rem;
 		margin: 0;
 	}
 	&__text{
@@ -368,7 +368,7 @@ main{
 	}
 	&__title{
 		font-size: 5rem;
-		padding: 3rem 0;
+		padding: 3rem 0 3rem;
 		position: relative;
 		margin: 0;
 		font-weight: 400;
@@ -424,31 +424,69 @@ main{
 }
   .skills{
 	  width: 100%;
-	  height: 100vh;
+	  display: block;
 	  text-align: center;
+	  height:140vh ;
 	  position: relative;
+	  background-color: #fff;
+	  z-index: 1;
+	  & input{
+	  	display: none;
+	  }
+	  & label{
+	  	display: inline-block;
+        width: auto;
+        height: auto;
+        @include tr(.1s);
+	  }
+         #slide1:checked ~ &__ui .skills__fr{
+           background-color: #F36518;
+           color:#fff;
+         }
+         #slide2:checked ~ &__ui .skills__w{
+           background-color: #FF7262;
+           color:#fff;
+        	}
+	  #slide1:checked ~ .skills__slider > .slide1,
+	  #slide2:checked ~ .skills__slider > .slide2,{
+	  	transform: scale(1);
+	  	opacity: 1;
+	  	z-index: 1;
+	  }
+	  &__slider{
+	  	position: relative;
+	    height:inherit;
+	    width: 100%;
+	    overflow: hidden;
+	    display: flex;
+	    flex-direction: column;
+	  }
 	  &__title{
 		font-size: 5rem;
-		padding: 3rem 0;
+		padding: 5rem 0 3rem;
 		margin: 0;
 		color: #fff;
 		position: relative;
 	  }
 	  &__front,&__web{
-		  display: inline-block;
-		  width: 100%;
-		  height: 100%;
-		  padding-bottom: 4rem;
+	  	position: absolute;
+        display: inline-block;
+        height: inherit;
+		width: 100%;
+		padding-bottom: 4rem;
+		// opacity: 0;
+		z-index: 0;
+		transform: scale(1.5);
+		transition:transform ease-in-out .5s opacity ease-in-out .5s;
 	  }
 	  &__front{
-		  position: relative;
 		  background-image: url(../img/LightCode.jpg);
 		  background-size: cover;
 		  background-position: center;
 		  background-repeat: no-repeat;
 		  background-attachment: fixed;
 		  &--left{
-           margin-left: 20%;
+           margin-left: 16%;
            	&::after{
 		  		left:200%;
 		  	}
@@ -456,7 +494,6 @@ main{
 		  		left: 200%;
 		  	}
 		  }
-		 
 		  &::before{
 			content:"";
 			position: absolute;
@@ -469,8 +506,6 @@ main{
 		}
 		}
 		&__web{
-			display: none;
-			position: relative;
 		  background-image: url(../img/design.png);
 		  background-size: cover;
 		  background-position: center;
@@ -491,6 +526,7 @@ main{
 			right:0 ;
 			background-color: #000;
 			opacity: .5;
+			// z-index: 9;
 		}
 	  }
 	  &__pct{
@@ -595,54 +631,41 @@ main{
 		  }
 	  }
 	  &__ui{
+	  	  position: absolute;
+	  	  bottom: 6%;
 		  width: 100%;
+		  z-index: 1;
 		  display: flex;
-		  justify-content: space-between;
+		  justify-content: space-around;
 		  align-items: center;
-		  padding: 0 25rem;
+		  padding: 0 15em;
 	  }
 	  &__fr{
-		margin: 0;
-		padding: 0;
-		  color:#803bf7;
-		  font-size: 5rem;
+		  margin: 0;
+		  padding:1rem 3rem;
+		  color:#F36518;
+		  font-size: 3rem;
 		  font-weight: bold;
-		  position: relative;
-		  &--alt{
-			color:#000;
-			font-size: 3rem;
-			position: relative;
+		  border-radius:50px;
+		  border:2px solid;
+		  &:hover{
+		  	background-color:#F36518;
+		  	color: #fff;
 		  }
+		  // position: relative;
 	  }
 	  &__w{
 		margin: 0;
-		padding: 0;
-		  color:#fff;
-		  font-size: 3rem;
-			  position: relative;
-		  &--alt{
-		  	position: relative;
-			color:#c2b93f;
-			font-size: 5rem;
-			font-weight: normal;
-		  }	  
-	  }
-	  &__btn{
-		  width: 7rem;
-		  height: 7rem;
-		  padding: 2rem;
-		  border-radius: 50%;
-		  border:1px #fff solid;
-		   position: relative;
-		  @include tr(.1s);
-		  &--active{
-			cursor: pointer;
-			  padding: 1rem;
-			  border:4px #fff solid;
-			  &:hover{
-				   padding: 1.5rem;
-			  }
+		padding:1rem 3rem;
+		 color:#FF7262;
+		 border-radius:50px;
+		 font-size: 3rem;
+		  border:2px solid;
+		  &:hover{
+		  	background-color:#FF7262;
+		  	color: #fff;
 		  }
+		// position: relative;  
 	  }
   }
   .bio{
@@ -653,7 +676,7 @@ main{
 	  text-align: center;
 	  &__title{
 		  margin: 0;
-		  padding: 0;
+		  padding:5rem 0 0;
 		  font-size: 5rem;
 		  font-weight: 300;
 		  display: inline-block;
@@ -693,7 +716,7 @@ main{
 	text-align: center;
 	&__title{
 		margin: 0;
-		padding: 0;
+		padding:3rem 0 0;
 		font-size: 5rem;
 		font-weight: 300;
 		display: inline-block;
@@ -850,7 +873,7 @@ main{
 	            }
 			}
 			.skills{
-				height: auto;
+				// height: auto;
 			}
             .bio{
             	height:auto ;
@@ -956,8 +979,8 @@ main{
 				height: auto;
 			}
 			.about{
-				height: 95vh;
-				padding: 0 2rem;
+				height: auto;
+				padding: 0 2rem 2rem;
 				&__pct{
 					width: 50%;
 				}
@@ -986,7 +1009,7 @@ main{
                  }
 			}
 			.skills{
-				height: auto;
+				// height:120vh;
 				&__front{
 					&--left{
 						margin-left: 15%;
@@ -1132,22 +1155,14 @@ main{
                  	margin-top: 2rem;
                  }
 			    }
-			    .services{
-			    	height: auto;
-			    }
-			    .about{
-			    	height: auto;
+			    .services{ 	
 			    	padding: 2rem;
-			    }
-			    .portfolio{
-                    height: auto;
-                    padding: 2rem;
                     &::before{
                     	font-size: 20rem;
                     }
 			    }
 			    .skills{
-			    	height: auto;
+			    	height: 120vh;
 			    }
 			    .bio{
 			    	height: auto;
@@ -1206,7 +1221,7 @@ main{
                  }
 			}
 			.skills{
-				height: auto;
+				// height: auto;
 				&__front{
 					&--left{
 						margin-left: 5%;
@@ -1412,7 +1427,7 @@ main{
 					}
 				}
 				.skills{
-					height: auto;
+					// height: auto;
 						&__front{
 					&--left{
 						margin-left: 5%;
@@ -1435,6 +1450,7 @@ main{
                 	}
                 }
 					&__ui{
+						bottom: 0;
 						width: 100%;
 						padding: 3rem 1rem;	
                         & p{

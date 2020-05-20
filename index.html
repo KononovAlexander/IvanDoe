@@ -102,7 +102,12 @@
 				 <div class="portfolio__btn">View more</div>
 			</section>
 			<section class="skills" id="skills">
-				<div class="skills__front">
+				<input type="radio" name="point" id="slide1" checked>
+				<input type="radio" name="point" id="slide2" >
+				<div class="skills__slider">
+				
+					
+				        <div class="skills__front slide1">
 					<h3 class="skills__title">My skills</h3>
 					<div class="skills__pct skills__front--left skills__pct--html">
 						<svg width="70" height="70"><use xlink:href='#html'/></svg>
@@ -114,15 +119,9 @@
 					<div class="skills__pct skills__front--left skills__pct--sass"><svg width="70" height="70"><use xlink:href='#saas'/></svg></div>
 					<div class="skills__pct skills__front--left skills__pct--b"><svg width="70" height="70"><use xlink:href='#bootstrap'/></svg></div>
 					<div class="skills__pct skills__front--left skills__pct--react"><svg width="70" height="70"><use xlink:href='#react'/></svg></div>
-					<div class="skills__ui">
-					    <div class="skills__btn"><svg width="100%" height="100%"><use xlink:href='#ui'/></svg></div>
-					    <p class="skills__fr">Front End</p>
-					    <p class="skills__w">Web design</p>
-					    <div class="skills__btn skills__btn--active"><svg width="100%" height="100%" transform="rotate(180)"><use xlink:href='#uiAct'/></svg>
-						</div>
-				    </div>
-				</div>
-				<div class="skills__web">
+
+				        </div>
+				        <div class="skills__web slide2">
 					<h3 class="skills__title">My skills</h3>
 					<div class="skills__pct skills__web--left skills__pct--ps ">
 						<svg width="70" height="70"><use xlink:href='#ps'/></svg>
@@ -135,13 +134,16 @@
 						</div>
 					<div class="skills__pct skills__web--left skills__pct--ai"><svg width="70" height="70"><use xlink:href='#ai'/></svg>
 						</div>
-						<div class="skills__ui">
-							<div class="skills__btn skills__btn--active"><svg width="100%" height="100%"><use xlink:href='#uiAct'/></svg></div>
-							<p class="skills__fr--alt">Front End</p>
-							<p class="skills__w--alt">Web design</p>
-							<div class="skills__btn "><svg width="100%" height="100%" transform='rotate(180)'><use xlink:href='#ui'/></svg></</div>
-					</div>
+						
+				        </div>
 				</div>
+				    <div class="skills__ui">
+				    	<label for="slide1"><p class="skills__fr">Front End</p></label>
+				    	<label for="slide2"><p class="skills__w">Web design</p></label>
+
+					</div>
+
+
 			</section>
 			<section class="bio" id="bio">
 				<h3 class="bio__title">My biography</h3>

@@ -426,7 +426,7 @@ main{
 	  width: 100%;
 	  display: block;
 	  text-align: center;
-	  height:130vh ;
+	  height:100vh ;
 	  position: relative;
 	  background-color: #000;
 	  z-index: 0;
@@ -542,8 +542,8 @@ main{
 	  }
 	  &__pct{
 		  position: relative;
-		  width: 6rem;
-		  height: 6rem;
+		  width: 5%;
+		  height: auto;
           display: flex;
           align-items: center;
           justify-content: space-around;
@@ -878,6 +878,9 @@ main{
                    	margin: 1rem auto;
                    	line-height: 4.4rem;
 	            }
+			}
+			.skills{
+				height: 130vh;
 			}
             .bio{
             	height:auto ;

@@ -814,7 +814,7 @@ main {
   width: 100%;
   display: block;
   text-align: center;
-  height: 130vh;
+  height: 100vh;
   position: relative;
   background-color: #000;
   z-index: 0; }
@@ -932,8 +932,8 @@ main {
       opacity: .5; }
   .skills__pct {
     position: relative;
-    width: 6rem;
-    height: 6rem;
+    width: 5%;
+    height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1239,6 +1239,8 @@ main {
       font-size: 2.2rem;
       margin: 1rem auto;
       line-height: 4.4rem; }
+  .skills {
+    height: 130vh; }
   .bio {
     height: auto;
     padding: 2rem 8rem; }

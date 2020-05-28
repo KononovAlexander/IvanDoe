@@ -629,7 +629,7 @@ main {
   color: #fff;
   text-align: center; }
   .services div:nth-of-type(even) {
-    padding-bottom: 0; }
+    padding-top: 20rem; }
   .services__title {
     font-size: 5rem;
     margin: 0;
@@ -647,10 +647,12 @@ main {
       width: 90%;
       margin: 0 auto; }
   .services__pct {
-    width: 40%;
     height: auto;
     margin: 0 auto;
     display: inline-block; }
+    .services__pct svg {
+      width: 100px;
+      height: 100px; }
 
 .about {
   width: 100%;
@@ -722,6 +724,7 @@ main {
     border: 4px solid #1c80a1;
     letter-spacing: 4px;
     word-spacing: 8px;
+    font-size: 2.8rem;
     cursor: pointer; }
     .about__btn:hover {
       background-color: #1c80a1;
@@ -743,7 +746,7 @@ main {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: -3rem;
+    left: 3rem;
     font-size: 30rem;
     color: #52adbd; }
   .portfolio__title {
@@ -1222,7 +1225,10 @@ main {
     height: auto;
     padding-bottom: 2rem; }
     .services div:nth-of-type(even) {
-      padding-top: 6%; }
+      padding-top: 3%; }
+    .services__pct svg {
+      width: 80px;
+      height: 80px; }
   .about {
     height: auto;
     padding-bottom: 2rem; }

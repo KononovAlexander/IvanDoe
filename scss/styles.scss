@@ -249,7 +249,7 @@ main{
 	color: #fff;
 	text-align: center;
 	& div:nth-of-type(even){
-		padding-bottom: 0; 
+		padding-top: 20rem; 
 	}
 	&__title{
 		font-size: 5rem;
@@ -271,7 +271,10 @@ main{
 		}
 	}
 	&__pct{
-		width: 40%;
+		& svg{
+			width: 100px;
+			height: 100px;
+		}
 		height: auto;
 		margin: 0 auto;
 		display: inline-block;  		
@@ -342,6 +345,7 @@ main{
 		border: 4px solid #1c80a1;
 		letter-spacing: 4px;
 		word-spacing: 8px;
+		font-size: 2.8rem;
 		cursor: pointer;
 		&:hover{
 			background-color: #1c80a1;
@@ -362,7 +366,7 @@ main{
 		position: absolute;
 		top: 0;
 		bottom: 0;
-		left: -3rem;
+		left: 3rem;
 		font-size: 30rem;
 		color:#52adbd;
 	}
@@ -855,7 +859,13 @@ main{
 				height:auto;
 				padding-bottom: 2rem;
 				& div:nth-of-type(even){
-		          padding-top: 6%;
+		          padding-top: 3%;
+	            }
+	            &__pct{
+	            	& svg{
+	            		width: 80px;
+	            		height: 80px;
+	            	}
 	            }
 			}
 			.about{
